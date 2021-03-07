@@ -22,10 +22,10 @@ class BinaryTree:
                 found = True
                 break
             else:
-                if current.left:
-                    to_visit.append(current.left)
-                if current.right:
-                    to_visit.append(current.right)
+                if current.left_child:
+                    to_visit.append(current.left_child)
+                if current.right_child:
+                    to_visit.append(current.right_child)
         return found
 
     def __repr__(self):
