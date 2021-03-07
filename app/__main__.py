@@ -1,4 +1,4 @@
-from .BinaryTree import BinaryTree
+# from .BinaryTree import BinaryTree
 from .Glass import Glass
 
 if __name__ == '__main__':
