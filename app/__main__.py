@@ -1,5 +1,5 @@
 # from .BinaryTree import BinaryTree
-from .Glass import Glass
+from Glass import Glass
 
 if __name__ == '__main__':
     # tree = BinaryTree()
@@ -22,5 +22,5 @@ if __name__ == '__main__':
     # else:
     #     print("Not found :(")
 
-    glass = Glass(1)
-    glass.create(4)
+    glass = Glass()
+    glass.create(0.5)
