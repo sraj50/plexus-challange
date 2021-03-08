@@ -5,11 +5,11 @@ class BinaryTree:
     def __init__(self):
         self.root = None
 
-    def insert(self, value):
+    def create(self, rows):
         if self.root is None:
-            self.root = Glass(value)
+            self.root = Glass(1)
         else:
-            self.root.insert(value)
+            self.root.create(self.root, rows)
 
     def breadth_first_search(self, data, root=None):
         root = self.root if root is None else root
