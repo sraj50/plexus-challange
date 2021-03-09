@@ -70,3 +70,15 @@ class Glass:
         else:
             sibling.left_child = self.right_child
             self.right_child.right_parent = sibling
+
+    def traverse(self):
+        to_visit = deque()
+        to_visit.append(self)
+
+        while len(to_visit) > 0:
+            current = to_visit.popleft()
+            print(current.water)
+            if current.left_child:
+                to_visit.append(current.left_child)
+            if current.right_child:
+                to_visit.append(current.right_child)
