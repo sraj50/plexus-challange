@@ -2,7 +2,7 @@ from collections import deque
 from .Glass import Glass
 
 
-def find_glass(i: int = 0, j: int = 0, k: int = 0):
+def find_glass(i: int = 0, j: int = 0, k: float = 0) -> float:
     glass = Glass()
     glass.fill(k)
 
@@ -12,8 +12,11 @@ def find_glass(i: int = 0, j: int = 0, k: int = 0):
     index_map: dict = map_index(glass)
     node = index_map.get((i, j))
 
+    if node is None:
+        return 0
+
     print(f"Found! Glass (i={i}, j={j}): {node.water}")
-    # return n.water
+    return node.water
 
 
 def traversal(glass: Glass) -> list:
