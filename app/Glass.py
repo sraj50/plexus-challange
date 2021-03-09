@@ -12,7 +12,10 @@ class Glass:
         self.capacity: float = capacity
         self.water: float = 0
 
-    def create(self, k: float):
+        self.i_index = 0
+        self.j_index = 0
+
+    def fill(self, k: float):
         q = deque()
         q.append((self, k))
 

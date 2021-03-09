@@ -3,5 +3,5 @@ from .Glass import Glass
 
 if __name__ == '__main__':
     glass = Glass()
-    glass.create(2)
+    glass.fill(2)
     glass.traverse()
