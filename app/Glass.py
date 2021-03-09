@@ -12,21 +12,24 @@ class Glass:
         self.capacity: float = capacity
         self.water: float = 0
 
+        self.i_index = 0
+        self.j_index = 0
+
     def fill(self, k: float):
         q = deque()
         q.append((self, k))
 
         while len(q) > 0:
             node, water_amount = q.popleft()
-            overflow = node.fill_glass(water_amount)
+            overflow = node._fill_glass(water_amount)
             if overflow > 0:
-                left_child = node.create_child(left=True)
-                right_child = node.create_child(left=False)
+                left_child = node._child(left=True)
+                right_child = node._child(left=False)
 
                 q.append((left_child, overflow/2))
                 q.append((right_child, overflow/2))
 
-    def fill_glass(self, k: float):
+    def _fill_glass(self, k: float):
         remaining_water = self.capacity - self.water
         overflow = max(0.0, k - remaining_water)
         fill_amount = k - overflow
@@ -34,7 +37,7 @@ class Glass:
         self.water += fill_amount
         return overflow
 
-    def create_child(self, left: bool):
+    def _child(self, left: bool):
         if left and self.left_child:
             return self.left_child
         elif not left and self.right_child:
