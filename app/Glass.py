@@ -72,15 +72,13 @@ class Glass:
             self.right_child.right_parent = sibling
 
     def traverse(self):
-        current_level = deque()
-        current_level.append(self)
+        to_visit = deque()
+        to_visit.append(self)
 
-        while len(current_level) > 0:
-            next_level = deque()
-            for node in current_level:
-                print(node.water)
-                if node.left_child:
-                    next_level.append(node.left_child)
-                if node.right_child:
-                    next_level.append(node.right_child)
-            current_level = next_level
+        while len(to_visit) > 0:
+            current = to_visit.popleft()
+            print(current.water)
+            if current.left_child:
+                to_visit.append(current.left_child)
+            if current.right_child:
+                to_visit.append(current.right_child)
