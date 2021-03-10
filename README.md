@@ -52,7 +52,24 @@ Found! Glass (i=3, j=1): 0.25
 ### Data Structure
 From the problem statement, it can be seen that this type of data structure is similar to a binary tree. However, it is still different from a full binary tree. A full binary is such that each node as either zero children or two children and each child has only one parent.
 
-In this case, a child node has two parents, so it is an extention to the binary tree
+In this case, a child node has two parents, except the right and left most ndoes, so it is an extention to the binary tree
 
 ### Tree Traversal
 BFT (Breadth First Traveral) was used to traverse the tree level by level starting from the root node. It has a time complexity of `O(n)` for every `n` node in the tree.
+
+## Assumptions
+It is assumed that liquid is poured from the root node and trickles downwards.
+
+## Approach
+1. A class `Glass` was created which represents a node in the binary tree. A `Glass` has the following properties:
+  - `capacity`: capacity of liquid a glass can hold
+  - `water`: amount of liquid in a glass
+2. Simulate the "filling" of water from the root node:
+  - based on the input of amount of liquid to pour, as long as there is some overflow, the program will continue to create child nodes
+  - the child nodes will receive any remaining overflow amount.
+3. Linking of children and parent:
+  - since this not a regular binary tree, as the children are being created, they are linked to their parent.
+4. Finding the water level of a particular node:
+  - Breadth First Traversal (BFT) was used to traverse the tree level-by-level
+  - during this process, the index (i, j) of each node was mapped using python a `dict` with the key being the coordinates and the value being the glass itself
+  - to find a particular node the built-in `dict.get()` was used to find a particular node based on the coordinate
