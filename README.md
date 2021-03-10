@@ -19,7 +19,7 @@ Download an install Python 3.8.5, if not installed go to below link.
 ## Build Project
 1. Run `make venv` to create virtual environment which creates a `venv` folder in project root directory.
   - Every time, activate the virtal environment to use in command line
-    - NOTE: if you used `make venv-<os>, then the `<env_name> is named `venv
+    - NOTE: if you used `make venv-<os>`, then the `<env_name>` is named `venv`
     - Unix-like: `cd <project_dir>` then `source ./venv/bin/activate`
     - Windows: `cd <project_dir>` then `./venv/Scripts/activate`
   - In your IDE (PyCharm, Eclipse PyDev), configure the Python intepretor to point to `./venv/bin` or `venv/Scripts`
