@@ -7,7 +7,7 @@ venv:
 	python3 -m venv venv
 
 run:
-	@python -m $(MODULE)
+	@python -m $(MODULE) $(ARGS)
 
 test:
 	@pytest
