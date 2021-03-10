@@ -62,14 +62,15 @@ It is assumed that liquid is poured from the root node and trickles downwards.
 
 ## Approach
 1. A class `Glass` was created which represents a node in the binary tree. A `Glass` has the following properties:
-  - `capacity`: capacity of liquid a glass can hold
-  - `water`: amount of liquid in a glass
+    - `capacity`: capacity of liquid a glass can hold
+    - `water`: amount of liquid in a glass
 2. Simulate the "filling" of water from the root node:
-  - based on the input of amount of liquid to pour, as long as there is some overflow, the program will continue to create child nodes
-  - the child nodes will receive any remaining overflow amount.
+    - based on the input of amount of liquid to pour, as long as there is some overflow, the program will continue to create child nodes if they don't exist
+    - the child nodes will receive any remaining overflow amount.
 3. Linking of children and parent:
-  - since this not a regular binary tree, as the children are being created, they are linked to their parent.
+    - during the fill process in step 2, as the children are being created, they are linked to their parent.
+    - the private function `_fill_glass`, `_child`, `_create_child` and `link_child` achieve this
 4. Finding the water level of a particular node:
-  - Breadth First Traversal (BFT) was used to traverse the tree level-by-level
-  - during this process, the index (i, j) of each node was mapped using python a `dict` with the key being the coordinates and the value being the glass itself
-  - to find a particular node the built-in `dict.get()` was used to find a particular node based on the coordinate
+    - Breadth First Traversal (BFT) was used to traverse the tree level-by-level
+    - during this process, the index (i, j) of each node was mapped using python a `dict` with the key being the coordinates and the value being the glass itself
+    - to find a particular node the built-in `dict.get()` was used to find a particular node based on the coordinate
