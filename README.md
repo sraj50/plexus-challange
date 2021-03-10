@@ -46,3 +46,13 @@ Found! Glass (i=3, j=1): 0.25
 5. `make test` - run test suite 
 
 # Analysis
+
+## Initial Thoughts
+
+### Data Structure
+From the problem statement, it can be seen that this type of data structure is similar to a binary tree. However, it is still different from a full binary tree. A full binary is such that each node as either zero children or two children and each child has only one parent.
+
+In this case, a child node has two parents, so it is an extention to the binary tree
+
+### Tree Traversal
+BFT (Breadth First Traveral) was used to traverse the tree level by level starting from the root node. It has a time complexity of `O(n)` for every `n` node in the tree.
