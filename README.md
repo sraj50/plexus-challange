@@ -17,14 +17,15 @@ Download an install Python 3.8.5, if not installed go to below link.
 `https://www.python.org/downloads/release/python-385/`
 
 ## Build Project
-1. Run `make venv` to create virtual environment which creates a `venv` folder in project root directory.
+1. Clone repo with `git clone https://github.com/sraj50/plexus-challange.git && cd plexus-challenge`
+2. Run `make venv` to create virtual environment which creates a `venv` folder in project root directory.
   - Every time, activate the virtal environment to use in command line
     - NOTE: if you used `make venv-<os>`, then the `<env_name>` is named `venv`
     - Unix-like: `cd <project_dir>` then `source ./venv/bin/activate`
     - Windows: `cd <project_dir>` then `./venv/Scripts/activate`
   - In your IDE (PyCharm, Eclipse PyDev), configure the Python intepretor to point to `./venv/bin` or `venv/Scripts`
-2. Run `make init` to setup and install dependences.
-3. Run `make run ARGS='-i 3 -j 1 -k 3'` to run the project with command line arguments
+3. Run `make init` to setup and install dependences.
+4. Run `make run ARGS='-i 3 -j 1 -k 3'` to run the project with command line arguments
 
 ## Make Commands
 1. `make init` - setup and install dependencies
