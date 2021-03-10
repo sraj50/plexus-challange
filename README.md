@@ -18,7 +18,7 @@ Download an install Python 3.8.5, if not installed go to below link.
 
 ## Build Project
 1. Clone repo with `git clone https://github.com/sraj50/plexus-challange.git && cd plexus-challenge`
-2. Run `make venv` to create virtual environment which creates a `venv` folder in project root directory.
+2. Run `make venv-<os>` to create virtual environment which creates a `venv` folder in project root directory for your OS.
   - Every time, activate the virtal environment to use in command line
     - NOTE: if you used `make venv-<os>`, then the `<env_name>` is named `venv`
     - Unix-like: `cd <project_dir>` then `source ./venv/bin/activate`
