@@ -85,7 +85,7 @@ It is assumed that liquid is poured from the root node and trickles downwards.
     - the private functions `_fill_glass`, `_child`, `_create_child` and `link_child` achieves this
 4. Finding the water level of a particular node:
     - Breadth First Traversal (BFT) was used to traverse the tree level-by-level
-    - during this process, the index (i, j) of each node was mapped using python a `dict` with the key being the coordinates and the value being the glass itself
+    - during this process, the index `(i, j)` of each node was mapped using python a `dict` with the key being the coordinates and the value being the glass itself
     - to find a particular node the built-in `dict.get()` was used to find a particular node based on the coordinate
 
 ### Pros and Cons
