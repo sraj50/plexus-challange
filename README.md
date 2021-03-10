@@ -74,3 +74,9 @@ It is assumed that liquid is poured from the root node and trickles downwards.
     - Breadth First Traversal (BFT) was used to traverse the tree level-by-level
     - during this process, the index (i, j) of each node was mapped using python a `dict` with the key being the coordinates and the value being the glass itself
     - to find a particular node the built-in `dict.get()` was used to find a particular node based on the coordinate
+
+### Pros and Cons
+| Pros                                                         | Cons                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Solution is extensible. For example, we could easily simulate what happens if water is poured  into **any** glass, not just the root node. | Not very space efficient. We are storing some data for each glass. |
+| Once we simulate it for K-litres of liquid, we can look up the solution to any glass in that particular tree. | Probably not going to hold up well for extremely large inputs. As we are using BFT for traversal and then using dictionary to search the coordinates.|
