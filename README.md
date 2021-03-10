@@ -45,6 +45,19 @@ Found! Glass (i=3, j=1): 0.25
 4. `make run ARGS=""` - run the program with command line arguments provided in `ARGS`
 5. `make test` - run test suite 
 
+## Command Line Interface
+Run `make run ARGS='--help'` to show details about parameters.
+```
+optional arguments:
+  -h, --help            show this help message and exit
+  -i ROW, --row ROW     Number of rows
+  -j COL, --col COL     Number of columns
+  -k WATER, --water WATER
+                        Amount of liquid in litres to pour into to glass
+  -v, --visualise       Show visualisation of tree
+
+```
+
 # Analysis
 
 ## Initial Thoughts
