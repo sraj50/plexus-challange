@@ -10,5 +10,6 @@ Download an install Python 3.8.5, if not installed go to below link.
 ## Build Project
 1. Run `make venv` to create virtual environment which creates a `venv` folder in project root directory.
 - On Unix-like systems run `source ./venv/bin/activate` to be in the virtual environment shell.
-- In your IDE (PyCharm, Eclipse PyDev), configure the Python intepretory
-2. Run `make run` to run the project.
+- In your IDE (PyCharm, Eclipse PyDev), configure the Python intepretor to point to `./venv/bin`
+2. Run `make init` to setup and install dependences.
+3. Run `make run ARGS='-i 3 -j 1 -k 3'` to run the project.
