@@ -25,7 +25,18 @@ Download an install Python 3.8.5, if not installed go to below link.
     - Windows: `cd <project_dir>` then `./venv/Scripts/activate`
   - In your IDE (PyCharm, Eclipse PyDev), configure the Python intepretor to point to `./venv/bin` or `venv/Scripts`
 3. Run `make init` to setup and install dependences.
-4. Run `make run ARGS='-i 3 -j 1 -k 3'` to run the project with command line arguments
+4. Run `make run ARGS='-i 3 -j 1 -k 3 -v'` to run the project with command line arguments which gives the below output
+```
+Row 000:  0.25
+Row 001:  0.25 0.25
+Row 002:  0.25 0.25 0.25
+Row 003:  0.16 0.25 0.25 0.16
+Row 004:  0.17 0.25 0.17
+Row 005:  0.05 0.05
+N. Glasses: 15
+Total Water: 3.0
+Found! Glass (i=3, j=1): 0.25
+```
 
 ## Make Commands
 1. `make init` - setup and install dependencies
@@ -33,3 +44,5 @@ Download an install Python 3.8.5, if not installed go to below link.
 3. `make venv-windows` - setup virtual environment for Windows systems
 4. `make run ARGS=""` - run the program with command line arguments provided in `ARGS`
 5. `make test` - run test suite 
+
+# Analysis
