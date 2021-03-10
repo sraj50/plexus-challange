@@ -82,7 +82,7 @@ It is assumed that liquid is poured from the root node and trickles downwards.
     - the child nodes will receive any remaining overflow amount.
 3. Linking of children and parent:
     - during the fill process in step 2, as the children are being created, they are linked to their parent.
-    - the private function `_fill_glass`, `_child`, `_create_child` and `link_child` achieve this
+    - the private functions `_fill_glass`, `_child`, `_create_child` and `link_child` achieves this
 4. Finding the water level of a particular node:
     - Breadth First Traversal (BFT) was used to traverse the tree level-by-level
     - during this process, the index (i, j) of each node was mapped using python a `dict` with the key being the coordinates and the value being the glass itself
