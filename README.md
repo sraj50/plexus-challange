@@ -25,3 +25,10 @@ Download an install Python 3.8.5, if not installed go to below link.
   - In your IDE (PyCharm, Eclipse PyDev), configure the Python intepretor to point to `./venv/bin` or `venv/Scripts`
 2. Run `make init` to setup and install dependences.
 3. Run `make run ARGS='-i 3 -j 1 -k 3'` to run the project with command line arguments
+
+## Make Commands
+1. `make init` - setup and install dependencies
+2. `make venv-unix` - setup virtual environment for Unix-like systems
+3. `make venv-windows` - setup virtual environment for Windows systems
+4. `make run ARGS=""` - run the program with command line arguments provided in `ARGS`
+5. `make test` - run test suite 
